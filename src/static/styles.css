@@ -260,6 +260,32 @@ button:hover {
   cursor: pointer;
 }
 
+#signup-container {
+  border: 2px solid #3f7dff;
+  box-shadow: 0 10px 25px rgba(63, 125, 255, 0.2);
+  background: linear-gradient(145deg, rgba(252, 255, 255, 0.85), rgba(229, 238, 255, 0.95));
+  border-radius: 16px;
+  padding: 18px;
+  position: sticky;
+  top: 20px;
+}
+
+#signup-container h3 {
+  color: #1a4fa2;
+}
+
+#signup-container .signup-banner {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border: 1px dashed #5e8bff;
+  border-radius: 10px;
+  background: #f6faff;
+  color: #254f9a;
+  font-weight: 600;
+}
+
+}
+
 .ad-card {
   border: 1px dashed #d4def1;
   border-radius: 12px;
