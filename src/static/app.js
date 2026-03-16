@@ -4,6 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const signupForm = document.getElementById("signup-form");
   const messageDiv = document.getElementById("message");
 
+  // Modal behavior
+  const modal = document.getElementById("activity-modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalBody = document.getElementById("modal-body");
+  const modalClose = document.getElementById("modal-close");
+
+  function openModal(title, bodyHtml) {
+    modalTitle.textContent = title;
+    modalBody.innerHTML = bodyHtml;
+    modal.classList.add("open");
+  }
+
+  function closeModal() {
+    modal.classList.remove("open");
+  }
+
+  modalClose.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
   // Function to fetch activities from API
   async function fetchActivities() {
     try {
@@ -36,6 +59,30 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         activitiesList.appendChild(activityCard);
+
+        activityCard.addEventListener("click", (evt) => {
+          if (evt.target.closest(".delete-participant")) {
+            return;
+          }
+
+          const participantHtml = details.participants.length
+            ? `<ul>${details.participants.map((p) => `<li>${p}</li>`).join("")}</ul>`
+            : "<p class='no-participants'>No participants yet</p>";
+
+          const body = `
+            <p><strong>Description:</strong> ${details.description}</p>
+            <p><strong>Schedule:</strong> ${details.schedule}</p>
+            <p><strong>Max participants:</strong> ${details.max_participants}</p>
+            <p><strong>Signed Up:</strong> ${details.participants.length}</p>
+            <p><strong>Remaining Spots:</strong> ${Math.max(0, details.max_participants - details.participants.length)}</p>
+            <div class="modal-participants">
+              <h4>Participants</h4>
+              ${participantHtml}
+            </div>
+          `;
+
+          openModal(name, body);
+        });
 
         activityCard.querySelectorAll(".delete-participant").forEach((button) => {
           button.addEventListener("click", async () => {
