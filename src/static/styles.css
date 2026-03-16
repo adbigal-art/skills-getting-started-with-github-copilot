@@ -70,6 +70,56 @@ section h3 {
   color: #1f3d72;
 }
 
+.ads-panel {
+  margin-bottom: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.ad-card {
+  border: 1px solid #dfe6f0;
+  border-left: 4px solid #2e5bff;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 12px 12px 10px;
+  box-shadow: 0 4px 10px rgba(29, 57, 103, 0.06);
+}
+
+.ad-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: #3f70d3;
+}
+
+.ad-card h4 {
+  margin: 0;
+  color: #1b3f85;
+  font-size: 1rem;
+}
+
+.ad-card p {
+  margin: 6px 0 8px;
+  color: #546a87;
+  font-size: 0.91rem;
+}
+
+.ad-cta {
+  color: #ffffff;
+  background: #2e5bff;
+  padding: 7px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.ad-cta:hover {
+  background: #1f47d8;
+}
+
 .activity-card {
   margin-bottom: 14px;
   padding: 16px;
