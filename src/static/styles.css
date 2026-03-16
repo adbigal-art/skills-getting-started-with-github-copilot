@@ -42,13 +42,44 @@ header h2 {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
+  .main-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+@media (max-width: 900px) {
   .main-grid {
     grid-template-columns: 1fr;
   }
+}
+
+#results-container {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+.results-card {
+  background: #f9fbff;
+  border: 1px solid #dbe7f5;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.results-card p,
+.results-card h4 {
+  margin: 0 0 8px;
+  color: #355a8f;
+}
+
+#result-top-activities {
+  list-style: disc;
+  margin-left: 16px;
+  color: #3f5f8d;
 }
 
 section {

@@ -37,6 +37,22 @@ document.addEventListener("DOMContentLoaded", () => {
       activitiesList.innerHTML = "";
 
       // Populate activities list
+      const totalActivities = Object.keys(activities).length;
+      const totalStudents = Object.values(activities).reduce((sum, item) => sum + item.participants.length, 0);
+      const availableSeats = Object.values(activities).reduce((sum, item) => sum + Math.max(0, item.max_participants - item.participants.length), 0);
+
+      const topActivities = Object.entries(activities)
+        .map(([name, details]) => ({ name, count: details.participants.length }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 4);
+
+      document.getElementById("result-total-activities").textContent = totalActivities;
+      document.getElementById("result-total-students").textContent = totalStudents;
+      document.getElementById("result-available-seats").textContent = availableSeats;
+
+      const topActList = document.getElementById("result-top-activities");
+      topActList.innerHTML = topActivities.map((item) => `<li>${item.name} (${item.count})</li>`).join("");
+
       Object.entries(activities).forEach(([name, details]) => {
         const activityCard = document.createElement("div");
         activityCard.className = "activity-card";
