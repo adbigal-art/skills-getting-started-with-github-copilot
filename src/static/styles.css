@@ -8,35 +8,22 @@
 body {
   font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  color: #d7e1ff;
-  max-width: 1300px;
+  color: #1f2937;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 30px 20px;
-  background: radial-gradient(circle at 15% 20%, #151f3c 0%, #0c1324 45%, #070d1c 100%);
+  padding: 32px 20px;
+  background-color: #eff2f7;
 }
 
 header {
-  text-align: left;
-  padding: 24px 28px;
-  margin-bottom: 18px;
-  background: linear-gradient(135deg, rgba(41, 87, 255, 0.95), rgba(72, 118, 255, 0.95));
+  text-align: center;
+  padding: 28px 24px;
+  margin-bottom: 32px;
+  background: linear-gradient(130deg, #2e5bff, #5f74ff);
   color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(45, 72, 145, 0.18);
 }
-
-header h1 {
-  font-size: 2.2rem;
-  margin: 0;
-}
-
-header h2 {
-  margin-top: 6px;
-  font-size: 1.05rem;
-  opacity: 0.91;
-}
-
 
 header h1 {
   font-size: 2rem;
@@ -50,39 +37,26 @@ header h2 {
   opacity: 0.95;
 }
 
-header h1 {
-  margin-bottom: 10px;
-}
-
 main {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 26px;
   justify-content: center;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 900px) {
   main {
-    grid-template-columns: 2.1fr 1fr;
-    gap: 18px;
+    grid-template-columns: 2fr 1fr;
   }
 }
 
 section {
-  background: linear-gradient(145deg, rgba(23, 33, 60, 0.92), rgba(10, 16, 32, 0.9));
-  padding: 20px;
-  border-radius: 16px;
-  border: 1px solid rgba(123, 152, 255, 0.2);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.42);
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 12px 24px rgba(30, 60, 120, 0.08);
   width: 100%;
-  max-width: 600px;
-}
-
-section h3 {
-  margin-bottom: 18px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(150, 170, 255, 0.2);
-  color: #c1d1ff;
+  max-width: 560px;
 }
 
 section h3 {
@@ -92,86 +66,13 @@ section h3 {
   color: #1f3d72;
 }
 
-.ads-panel {
-  margin-bottom: 16px;
-  display: grid;
-  gap: 12px;
-}
-
-.ad-card {
-  border: 1px solid #dfe6f0;
-  border-left: 4px solid #2e5bff;
-  border-radius: 10px;
-  background: #ffffff;
-  padding: 12px 12px 10px;
-  box-shadow: 0 4px 10px rgba(29, 57, 103, 0.06);
-}
-
-.ad-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-  color: #3f70d3;
-}
-
-.ad-card h4 {
-  margin: 0;
-  color: #1b3f85;
-  font-size: 1rem;
-}
-
-.ad-card p {
-  margin: 6px 0 8px;
-  color: #546a87;
-  font-size: 0.91rem;
-}
-
-.ad-cta {
-  color: #ffffff;
-  background: #2e5bff;
-  padding: 7px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.86rem;
-  font-weight: 700;
-}
-
-.ad-cta:hover {
-  background: #1f47d8;
-}
-
 .activity-card {
   margin-bottom: 14px;
   padding: 16px;
-  border: 1px solid rgba(82, 113, 191, 0.35);
-  border-radius: 14px;
-  background: linear-gradient(160deg, rgba(23, 32, 56, 0.9), rgba(15, 21, 39, 0.86));
-  color: #dfe6ff;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-}
-
-.activity-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 24px rgba(34, 57, 110, 0.35);
-  border-color: rgba(107, 150, 255, 0.65);
-}
-
-.activity-card h4 {
-  margin-bottom: 10px;
-  color: #8da9ff;
-  font-weight: 700;
-  font-size: 1.16rem;
-}
-
-.activity-card p {
-  margin-bottom: 8px;
-  color: #abb7d7;
-}
-
-.activity-card p strong {
-  color: #c1d5ff;
+  border: 1px solid #e5e8ef;
+  border-radius: 12px;
+  background-color: #fcfdff;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .activity-card:hover {
@@ -193,31 +94,6 @@ section h3 {
 
 .activity-card p strong {
   color: #24395c;
-}
-
-
-section h3 {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  color: #1a237e;
-}
-
-.activity-card {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
-}
-
-.activity-card p {
-  margin-bottom: 8px;
 }
 
 .participants {
@@ -324,8 +200,6 @@ button:active {
   transform: translateY(0);
 }
 
-
-
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -352,13 +226,6 @@ button:active {
 
 .hidden {
   display: none;
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px;
-  color: #666;
 }
 
 .modal {
@@ -432,4 +299,3 @@ footer {
 .modal-participants ul li {
   margin-bottom: 4px;
 }
-
