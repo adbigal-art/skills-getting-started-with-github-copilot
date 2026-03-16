@@ -279,15 +279,6 @@ button:active {
   transform: translateY(0);
 }
 
-#signup-form {
-  position: relative;
-}
-
-#signup-button {
-  position: relative;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
 
 
 .message {

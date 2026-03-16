@@ -130,26 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const signupButton = document.getElementById("signup-button");
-
-  function avoidPointer(event) {
-    const rect = signupButton.getBoundingClientRect();
-    const distance = Math.hypot(
-      event.clientX - (rect.left + rect.width / 2),
-      event.clientY - (rect.top + rect.height / 2)
-    );
-
-    if (distance < 120) {
-      const offsetX = Math.sign(rect.left + rect.width / 2 - event.clientX) * 30;
-      const offsetY = Math.sign(rect.top + rect.height / 2 - event.clientY) * 15;
-      signupButton.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    } else {
-      signupButton.style.transform = "translate(0, 0)";
-    }
-  }
-
-  document.addEventListener("mousemove", avoidPointer);
-
   // Handle form submission
   signupForm.addEventListener("submit", async (event) => {
     event.preventDefault();
